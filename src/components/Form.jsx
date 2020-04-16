@@ -27,7 +27,7 @@ const Form = () => {
                                 {errors.firstName ? (
                                     <div className="text-danger mb-2">{errors.firstName}</div>
                                 ) : null}
-                                <div class="input-group">
+                                <div className="input-group">
                                     <input
                                         type="text"
                                         className="form-control"
@@ -35,9 +35,9 @@ const Form = () => {
                                         onChange={handleChange}
                                         value={values.firstName}
                                     />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">
-                                            <img height="18" width="18" src={NameImg} />
+                                    <div className="input-group-append">
+                                        <span className="input-group-text">
+                                            <img height="18" width="18" alt="" src={NameImg} />
                                         </span>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@ const Form = () => {
                                 {errors.password ? (
                                     <div className="text-danger mb-2">{errors.password}</div>
                                 ) : null}
-                                <div class="input-group">
+                                <div className="input-group">
                                     <input
                                         type="password"
                                         className="form-control"
@@ -91,9 +91,9 @@ const Form = () => {
                                         onChange={handleChange}
                                         value={values.password}
                                     />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">
-                                            <img height="18" width="18" src={PasswordImg} />
+                                    <div className="input-group-append">
+                                        <span className="input-group-text">
+                                            <img height="18" width="18" alt="" src={PasswordImg} />
                                         </span>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@ const Form = () => {
                                 {errors.confirmPassword ? (
                                     <div className="text-danger mb-2">{errors.confirmPassword}</div>
                                 ) : null}
-                                <div class="input-group">
+                                <div className="input-group">
                                     <input
                                         type="password"
                                         className="form-control"
@@ -113,9 +113,12 @@ const Form = () => {
                                         onChange={handleChange}
                                         value={values.confirmPassword}
                                     />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">
-                                            <img height="18" width="18" src={ConfirmPasswordImg} />
+                                    <div className="input-group-append">
+                                        <span className="input-group-text">
+                                            {(values.password && values.password === values.confirmPassword)
+                                                ? <img height="18" width="18" alt="" src={ConfirmPasswordImg} />
+                                                : <img height="18" width="18" alt="" src={PasswordImg} />
+                                            }
                                         </span>
                                     </div>
                                 </div>
