@@ -2,6 +2,9 @@ import React, { useContext } from 'react';
 import { Formik } from 'formik';
 import { validationSchema } from "../utils/validationSchema"
 import { store } from '../store.js';
+import PasswordImg from '../images/pass-icon.png';
+import ConfirmPasswordImg from '../images/con-pass-icon.png';
+import NameImg from '../images/name-icon.png';
 
 const Form = () => {
     const { state, dispatch } = useContext(store);
@@ -34,7 +37,7 @@ const Form = () => {
                                     />
                                     <div class="input-group-append">
                                         <span class="input-group-text">
-                                            <i class="fa fa-address-card-o" aria-hidden="true" />
+                                            <img height="18" width="18" src={NameImg} />
                                         </span>
                                     </div>
                                 </div>
@@ -90,7 +93,7 @@ const Form = () => {
                                     />
                                     <div class="input-group-append">
                                         <span class="input-group-text">
-                                            <i class="fa fa-address-card-o" aria-hidden="true" />
+                                            <img height="18" width="18" src={PasswordImg} />
                                         </span>
                                     </div>
                                 </div>
@@ -112,7 +115,7 @@ const Form = () => {
                                     />
                                     <div class="input-group-append">
                                         <span class="input-group-text">
-                                            <i class="fa fa-address-card-o" aria-hidden="true" />
+                                            <img height="18" width="18" src={ConfirmPasswordImg} />
                                         </span>
                                     </div>
                                 </div>
