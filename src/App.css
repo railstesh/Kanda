@@ -1,22 +1,37 @@
+html, body, #root {
+    height: 100%;
+}
 .app {
     background-color: #E8E8E8;
-    height: 725px;
 }
 .card {
     width: 55%;
-    top: 20%;
-    margin: 0 auto;
-    min-height: 200px;
-}
-.card-top {
-    top: 35%;
 }
 
 @media screen and (max-width: 575px){
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form .row:nth-child(1) {
+        order: 2;
+    }
+    .form .row:nth-child(2) {
+        order: 1;
+    }
+    .form .row:nth-child(3) {
+        order: 3;
+    }
+    .form .row:nth-child(4) {
+        order: 4;
+    }
     .card {
-        width: 100%;
+        width: 80%;
     }
     .col {
         flex-basis: unset;
+    }
+    .submit-button {
+        width: 100%;
     }
 }

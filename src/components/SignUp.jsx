@@ -6,7 +6,7 @@ import { store } from '../store.js';
 const SignUp = () => {
     const { state } = useContext(store);
     return (
-        <div className={`card ${state.success && "card-top"}`}>
+        <div className={`card ${state.success ? "p-5" : ""}`}>
             {state.success
                 ? <Success />
                 : (
