@@ -34,7 +34,7 @@ const Form = () => {
                     <div className="form-group">
                         <label htmlFor="firstName">First Name</label>
                         {errors && errors.firstName ? (
-                            <div className="text-danger mb-2">{errors.firstName}</div>
+                            <small className="text-danger d-block mb-md-2">{errors.firstName}</small>
                         ) : null}
                         <div className="input-group">
                             <input
@@ -46,7 +46,7 @@ const Form = () => {
                                 value={values.firstName}
                             />
                             <div className="input-group-append">
-                                <span className="input-group-text">
+                                <span className="input-group-text bg-white">
                                     <img height="18" width="18" alt="" src={NameImg} />
                                 </span>
                             </div>
@@ -57,7 +57,7 @@ const Form = () => {
                     <div className="form-group">
                         <label htmlFor="lastName">Last Name</label>
                         {errors && errors.lastName ? (
-                            <div className="text-danger mb-2">{errors.lastName}</div>
+                            <small className="text-danger d-block mb-md-2">{errors.lastName}</small>
                         ) : null}
                         <input
                             type="text"
@@ -75,7 +75,7 @@ const Form = () => {
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
                         {errors && errors.email ? (
-                            <div className="text-danger mb-2">{errors.email}</div>
+                            <small className="text-danger d-block mb-md-2">{errors.email}</small>
                         ) : null}
                         <input
                             type="text"
@@ -93,7 +93,7 @@ const Form = () => {
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
                         {errors && errors.password ? (
-                            <div className="text-danger mb-2">{errors.password}</div>
+                            <small className="text-danger d-block mb-md-2">{errors.password}</small>
                         ) : null}
                         <div className="input-group">
                             <input
@@ -105,7 +105,7 @@ const Form = () => {
                                 value={values.password}
                             />
                             <div className="input-group-append">
-                                <span className="input-group-text">
+                                <span className="input-group-text bg-white">
                                     <img height="18" width="18" alt="" src={PasswordImg} />
                                 </span>
                             </div>
@@ -116,7 +116,7 @@ const Form = () => {
                     <div className="form-group">
                         <label htmlFor="confirmPassword">Confirm Password</label>
                         {errors && errors.confirmPassword ? (
-                            <div className="text-danger mb-2">{errors.confirmPassword}</div>
+                            <small className="text-danger d-block mb-md-2">{errors.confirmPassword}</small>
                         ) : null}
                         <div className="input-group">
                             <input
@@ -128,7 +128,7 @@ const Form = () => {
                                 value={values.confirmPassword}
                             />
                             <div className="input-group-append">
-                                <span className="input-group-text">
+                                <span className="input-group-text bg-white">
                                     {(values.password && values.password === values.confirmPassword)
                                         ? <img height="18" width="18" alt="" src={ConfirmPasswordImg} />
                                         : <img height="18" width="18" alt="" src={PasswordImg} />
@@ -141,7 +141,7 @@ const Form = () => {
             </div>
             <div className="row">
                 <div className="col">
-                    <button type="submit" className="btn btn-primary submit-button mt-4">Submit</button>
+                    <button type="submit" className="btn btn-primary submit-button mt-md-4 mt-2">Submit</button>
                 </div>
             </div>
         </form>

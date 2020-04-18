@@ -11,7 +11,7 @@ const SignUp = () => {
                 ? <Success />
                 : (
                     <div className="card-body">
-                        <h3 className="card-title pb-4">Kanda Exam</h3>
+                        <h3 className="card-title pb-md-4 mb-1">Kanda Exam</h3>
                         <Form />
                     </div>
                 )
